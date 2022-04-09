@@ -32,6 +32,7 @@ def handle_data(**context):
     print('Data transformed')
     print(btc_usd_ts, flush=True)
     print('---------------------------------------------------')
+    # this xcom_push is unnecessary because this is our final task
     ti.xcom_push(key='btc_usd', value=btc_usd_ts)
 
 
